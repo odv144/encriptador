@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador rama main</title>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador🔀</title>
 </head>
+
 <body>
-    
+    <header>
+        <img src="Logo.png" alt="logo">
+    </header>
+
+    <section id="principal">
+        <div id="frase">
+            <textarea row=5 cols="100" name="ingreso" id="ingreso" placeholder="Ingrese el texto aqui"></textarea>
+        </div>
+
+        <div>
+            <button class="btn btn-encrip">Encriptar</button>
+            <button class="btn btn-desencrip">Desencriptar</button>
+        </div>
+
+    </section>
+    <section id="section-der">
+        <img src="Muneco.png" alt="">
+        <!-- <h3>Resultado del texto encriptado en input</h3>
+        <input type="text" id="result" value=""> -->
+        <h3>Resultado del texto encriptado en div</h3>
+        <div >
+            <span id="resultado"></span>
+        </div>
+        <button class="btn btn-copiar">Copiar</button>
+    </section>
+
+    <footer>
+        <ul>
+            <li>Virili Omar Dario</li>
+            <li>Argentina</li>
+            <li>Challenge Encriptador 2023</li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
