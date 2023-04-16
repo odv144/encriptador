@@ -9,34 +9,34 @@
     <title>Encriptador🔀</title>
 </head>
 
-<body>
-    <header>
+<body class="grid-container">
+    <header class="header" >
         <img src="Logo.png" alt="logo">
     </header>
 
-    <section id="principal">
+    <section class="main" id="principal">
         <div id="frase">
             <textarea row=5 cols="100" name="ingreso" id="ingreso" placeholder="Ingrese el texto aqui"></textarea>
         </div>
 
-        <div>
+    </section>
+        <div class="botones">
             <button class="btn btn-encrip">Encriptar</button>
             <button class="btn btn-desencrip">Desencriptar</button>
         </div>
 
-    </section>
-    <section id="section-der">
-        <img src="Muneco.png" alt="">
+    <section class="asider">
+        <img class="logoG" src="Muneco.png" alt="">
         <!-- <h3>Resultado del texto encriptado en input</h3>
         <input type="text" id="result" value=""> -->
-        <h3>Resultado del texto encriptado en div</h3>
-        <div >
+        <div class="result">
+            <h3>Texto encriptado</h3>
             <span id="resultado"></span>
         </div>
-        <button class="btn btn-copiar">Copiar</button>
+        <button class="btn btn-copiar clonar">Copiar</button>
     </section>
 
-    <footer>
+    <footer class="footer">
         <ul>
             <li>Virili Omar Dario</li>
             <li>Argentina</li>
