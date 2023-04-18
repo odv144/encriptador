@@ -58,21 +58,29 @@ function desencriptador(texto) {
 }
 //boton de copiar 
 btnCopiar.addEventListener('click', function (e) {
-    let textoEncrip =window.getSelection().toString();
-    let ingreso =  document.getElementById("ingreso");
-    if(textoEncrip!=''){
+    let textoEncrip = window.getSelection().toString();
+    let ingreso = document.getElementById("ingreso");
+    if (textoEncrip != '') {
         ingreso.value = textoEncrip;
-    }else{
+    } else {
         ingreso.value = document.getElementById('resultado').textContent;
     }
-   
+
 });
 
 const textarea = document.querySelector('#ingreso');
-textarea.addEventListener('keypress', function(e) {
-  const key = e.key;
-  const regex = /[^a-zñ\s]/g; // caracteres que no sean letras o espacios
-  if (regex.test(key)) {
-    e.preventDefault(); // evitar que se escriba el carácter en el textarea
-  }
+textarea.addEventListener('keypress', function (e) {
+    const key = e.key;
+    const regex = /^[a-z\sñ]/g; // caracteres que no sean letras o espacios
+    const mayu = /^[A-ZÑ]$/;
+    const acentuado = /^[áéíóúÁÉÍÓÚ]/g;
+    if (!regex.test(key)) {
+        if (mayu.test(key)) {
+            textarea.value += key.toLowerCase();
+            e.preventDefault();
+        } else {
+            e.preventDefault();
+         }
+       
+    }
 });
