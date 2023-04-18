@@ -60,6 +60,19 @@ function desencriptador(texto) {
 btnCopiar.addEventListener('click', function (e) {
     let textoEncrip =window.getSelection().toString();
     let ingreso =  document.getElementById("ingreso");
-    ingreso.value = textoEncrip;
+    if(textoEncrip!=''){
+        ingreso.value = textoEncrip;
+    }else{
+        ingreso.value = document.getElementById('resultado').textContent;
+    }
    
+});
+
+const textarea = document.querySelector('#ingreso');
+textarea.addEventListener('keypress', function(e) {
+  const key = e.key;
+  const regex = /[^a-zñ\s]/g; // caracteres que no sean letras o espacios
+  if (regex.test(key)) {
+    e.preventDefault(); // evitar que se escriba el carácter en el textarea
+  }
 });
